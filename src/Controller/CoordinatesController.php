@@ -63,6 +63,7 @@ class CoordinatesController extends AbstractController
         $postcode = $request->get('postcode', '01112');
 
         $apiKey = $_ENV["GOOGLE_GEOCODING_API_KEY"];
+        $apiHost = $_ENV["GOOGLE_GEOCODING_HOST"];
 
         $params = [
             'query' => [
@@ -74,7 +75,7 @@ class CoordinatesController extends AbstractController
 
         $client = new Client();
 
-        $response = $client->get('https://maps.googleapis.com/maps/api/geocode/json', $params);
+        $response = $client->get($apiHost . '/maps/api/geocode/json', $params);
 
         $data = json_decode($response->getBody()->getContents(), true, 512, JSON_THROW_ON_ERROR);
 
@@ -104,6 +105,7 @@ class CoordinatesController extends AbstractController
         $postcode = $request->get('postcode', '01112');
 
         $apiKey = $_ENV["HEREMAPS_GEOCODING_API_KEY"];
+        $apiHost = $_ENV["HEREMAPS_GEOCODING_HOST"];
 
         $params = [
             'query' => [
@@ -114,8 +116,7 @@ class CoordinatesController extends AbstractController
 
         $client = new Client();
 
-        $response = $client->get('https://geocode.search.hereapi.com/v1/geocode', $params);
-
+        $response = $client->get($apiHost . '/v1/geocode', $params);
         $data = json_decode($response->getBody()->getContents(), true, 512, JSON_THROW_ON_ERROR);
 
         if (count($data['items']) === 0) {

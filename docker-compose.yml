@@ -27,3 +27,8 @@ services:
             MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
             MYSQL_DB_NAME: ${MYSQL_DB_NAME}
         container_name: nt_coordinates_resolver_mysql
+
+    wiremock:
+        image: wiremock/wiremock:2.33.2
+        ports:
+            - "2000:8080"

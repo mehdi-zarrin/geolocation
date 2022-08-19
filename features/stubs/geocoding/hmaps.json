@@ -1,0 +1,58 @@
+{
+  "request": {
+    "urlPath": "/v1/geocode",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "items": [
+        {
+          "title": "J. Jasinskio gatvė 16, LT-03163 Vilnius, Lietuva",
+          "id": "here:af:streetsection:-6G5iAj9lL2ZmcLi1xpC2A:CggIBCDehaq-AhABGgIxNg",
+          "resultType": "houseNumber",
+          "houseNumberType": "PA",
+          "address": {
+            "label": "J. Jasinskio gatvė 16, LT-03163 Vilnius, Lietuva",
+            "countryCode": "LTU",
+            "countryName": "Lietuva",
+            "state": "Vilniaus Apskritis",
+            "county": "Vilniaus Miesto savivaldybė",
+            "city": "Vilnius",
+            "district": "Naujamiestis",
+            "street": "J. Jasinskio gatvė",
+            "postalCode": "03163",
+            "houseNumber": "16"
+          },
+          "position": {
+            "lat": 54.68781,
+            "lng": 25.26095
+          },
+          "access": [
+            {
+              "lat": 54.68795,
+              "lng": 25.26097
+            }
+          ],
+          "mapView": {
+            "west": 25.25939,
+            "south": 54.68691,
+            "east": 25.26251,
+            "north": 54.68871
+          },
+          "scoring": {
+            "queryScore": 0.84,
+            "fieldScore": {
+              "country": 1,
+              "city": 1,
+              "streets": [
+                0.8
+              ],
+              "houseNumber": 1
+            }
+          }
+        }
+      ]
+    }
+  }
+}

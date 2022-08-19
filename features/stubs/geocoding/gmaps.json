@@ -1,0 +1,99 @@
+{
+  "request": {
+    "urlPath": "/maps/api/geocode/json",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "results": [
+        {
+          "address_components": [
+            {
+              "long_name": "16",
+              "short_name": "16",
+              "types": [
+                "street_number"
+              ]
+            },
+            {
+              "long_name": "J. Jasinskio gatvė",
+              "short_name": "J. Jasinskio g.",
+              "types": [
+                "route"
+              ]
+            },
+            {
+              "long_name": "Vilnius",
+              "short_name": "Vilnius",
+              "types": [
+                "locality",
+                "political"
+              ]
+            },
+            {
+              "long_name": "Vilniaus miesto savivaldybė",
+              "short_name": "Vilniaus m. sav.",
+              "types": [
+                "administrative_area_level_2",
+                "political"
+              ]
+            },
+            {
+              "long_name": "Vilniaus apskritis",
+              "short_name": "Vilniaus apskr.",
+              "types": [
+                "administrative_area_level_1",
+                "political"
+              ]
+            },
+            {
+              "long_name": "Lithuania",
+              "short_name": "LT",
+              "types": [
+                "country",
+                "political"
+              ]
+            },
+            {
+              "long_name": "01112",
+              "short_name": "01112",
+              "types": [
+                "postal_code"
+              ]
+            }
+          ],
+          "formatted_address": "J. Jasinskio g. 16, Vilnius 01112, Lithuania",
+          "geometry": {
+            "location": {
+              "lat": 54.6878265,
+              "lng": 25.2609295
+            },
+            "location_type": "ROOFTOP",
+            "viewport": {
+              "northeast": {
+                "lat": 54.6887817302915,
+                "lng": 25.2618634302915
+              },
+              "southwest": {
+                "lat": 54.6860837697085,
+                "lng": 25.2591654697085
+              }
+            }
+          },
+          "place_id": "ChIJkQWDFwqU3UYRE9foMv7XC0E",
+          "plus_code": {
+            "compound_code": "M7Q6+49 Vilnius, Lithuania",
+            "global_code": "9G67M7Q6+49"
+          },
+          "types": [
+            "street_address"
+          ]
+        }
+      ],
+      "status": "OK"
+    }
+  }
+}
+
+

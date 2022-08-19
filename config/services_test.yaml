@@ -1,0 +1,11 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    MTZ\BehatContext\Wiremock\WiremockContext:
+        arguments:
+            $baseUrl: 'http://wiremock:8080'
+            $stubsDirectory: '%kernel.project_dir%/features/stubs'
+
+    MTZ\BehatContext\Doctrine\DoctrineContext:
