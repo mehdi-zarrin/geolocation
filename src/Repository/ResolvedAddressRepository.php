@@ -2,11 +2,13 @@
 
 namespace App\Repository;
 
+use App\Contracts\ServiceRequestInterface;
+use App\Contracts\ServiceResponseInterface;
+use App\DataTransferObject\Request\AddressRequestDto;
+use App\DataTransferObject\Response\CoordinatesResponseDto;
+use App\DataTransferObject\Response\EmptyResponseDto;
 use App\Entity\ResolvedAddress;
-use App\ValueObject\Address;
-use App\ValueObject\Coordinates;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\ORM\ORMException;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -22,21 +24,29 @@ class ResolvedAddressRepository extends ServiceEntityRepository
         parent::__construct($registry, ResolvedAddress::class);
     }
 
-    public function getByAddress(Address $address): ?ResolvedAddress
+    /**
+     * @param AddressRequestDto $address
+     * @return ResolvedAddress|null
+     */
+    public function getByAddress(ServiceRequestInterface $address): ?ResolvedAddress
     {
         return $this->findOneBy([
-            'countryCode' => $address->getCountry(),
+            'countryCode' => $address->getCountryCode(),
             'city' => $address->getCity(),
             'street' => $address->getStreet(),
             'postcode' => $address->getPostcode()
         ]);
     }
 
-    public function saveResolvedAddress(Address $address, ?Coordinates $coordinates): void
+    /**
+     * @param AddressRequestDto $address
+     * @param CoordinatesResponseDto|null $coordinates
+     */
+    public function saveResolvedAddress(ServiceRequestInterface $address, ?ServiceResponseInterface $coordinates): void
     {
         $resolvedAddress = new ResolvedAddress();
         $resolvedAddress
-            ->setCountryCode($address->getCountry())
+            ->setCountryCode($address->getCountryCode())
             ->setCity($address->getCity())
             ->setStreet($address->getStreet())
             ->setPostcode($address->getPostcode());

@@ -1,0 +1,25 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  App\Service\Geocode\Providers\GoogleMapsProvider:
+    arguments:
+      - '%env(resolve:GOOGLE_GEOCODING_API_KEY)%'
+      - '%env(resolve:GOOGLE_GEOCODING_HOST)%'
+
+  App\Service\Geocode\Providers\HereMapsProvider:
+    arguments:
+      - '%env(resolve:HEREMAPS_GEOCODING_API_KEY)%'
+      - '%env(resolve:HEREMAPS_GEOCODING_HOST)%'
+
+  App\Service\Geocode\Geocoder:
+    arguments:
+      $providers:
+        - '@App\Service\Geocode\Providers\CacheProvider'
+        - '@App\Service\Geocode\Providers\GoogleMapsProvider'
+        - '@App\Service\Geocode\Providers\HereMapsProvider'
+
+  App\Service\Geocode\Caching\MysqlGeocodeCache: ~
+
+  App\Service\Geocode\Caching\GeocodeCacheInterface: '@App\Service\Geocode\Caching\MysqlGeocodeCache'

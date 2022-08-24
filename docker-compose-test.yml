@@ -1,0 +1,24 @@
+version: "3"
+services:
+  php-test:
+    build:
+      context: ./
+    volumes:
+      - .:/app:cached
+    working_dir: /app
+    depends_on:
+      - mysql-test
+    environment:
+      - APP_ENV=test
+
+  mysql-test:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DB_NAME: coordinates_resolver
+      MYSQL_DATABASE: "coordinates_resolver"
+    container_name: test_coordinates_resolver_mysql
+
+  wiremock:
+    image: wiremock/wiremock:2.33.2
+    container_name: wiremock-test
