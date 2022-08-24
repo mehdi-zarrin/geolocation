@@ -10,84 +10,99 @@
         {
           "address_components": [
             {
-              "long_name": "16",
-              "short_name": "16",
+              "long_name": "11",
+              "short_name": "11",
               "types": [
                 "street_number"
               ]
             },
             {
-              "long_name": "J. Jasinskio gatvė",
-              "short_name": "J. Jasinskio g.",
+              "long_name": "Pariser Stra\u00dfe",
+              "short_name": "Pariser Str.",
               "types": [
                 "route"
               ]
             },
             {
-              "long_name": "Vilnius",
-              "short_name": "Vilnius",
+              "long_name": "Bezirk Charlottenburg-Wilmersdorf",
+              "short_name": "Bezirk Charlottenburg-Wilmersdorf",
+              "types": [
+                "political",
+                "sublocality",
+                "sublocality_level_1"
+              ]
+            },
+            {
+              "long_name": "Berlin",
+              "short_name": "Berlin",
               "types": [
                 "locality",
                 "political"
               ]
             },
             {
-              "long_name": "Vilniaus miesto savivaldybė",
-              "short_name": "Vilniaus m. sav.",
+              "long_name": "Kreisfreie Stadt Berlin",
+              "short_name": "Kreisfreie Stadt Berlin",
               "types": [
-                "administrative_area_level_2",
+                "administrative_area_level_3",
                 "political"
               ]
             },
             {
-              "long_name": "Vilniaus apskritis",
-              "short_name": "Vilniaus apskr.",
+              "long_name": "Berlin",
+              "short_name": "BE",
               "types": [
                 "administrative_area_level_1",
                 "political"
               ]
             },
             {
-              "long_name": "Lithuania",
-              "short_name": "LT",
+              "long_name": "Germany",
+              "short_name": "DE",
               "types": [
                 "country",
                 "political"
               ]
             },
             {
-              "long_name": "01112",
-              "short_name": "01112",
+              "long_name": "10719",
+              "short_name": "10719",
               "types": [
                 "postal_code"
               ]
             }
           ],
-          "formatted_address": "J. Jasinskio g. 16, Vilnius 01112, Lithuania",
+          "formatted_address": "Pariser Str. 11, 10719 Berlin, Germany",
           "geometry": {
+            "bounds": {
+              "northeast": {
+                "lat": 52.4969761,
+                "lng": 13.3259225
+              },
+              "southwest": {
+                "lat": 52.4967893,
+                "lng": 13.3256015
+              }
+            },
             "location": {
-              "lat": 54.6878265,
-              "lng": 25.2609295
+              "lat": 52.49686459999999,
+              "lng": 13.3257589
             },
             "location_type": "ROOFTOP",
             "viewport": {
               "northeast": {
-                "lat": 54.6887817302915,
-                "lng": 25.2618634302915
+                "lat": 52.4981936302915,
+                "lng": 13.3271109802915
               },
               "southwest": {
-                "lat": 54.6860837697085,
-                "lng": 25.2591654697085
+                "lat": 52.4954956697085,
+                "lng": 13.3244130197085
               }
             }
           },
-          "place_id": "ChIJkQWDFwqU3UYRE9foMv7XC0E",
-          "plus_code": {
-            "compound_code": "M7Q6+49 Vilnius, Lithuania",
-            "global_code": "9G67M7Q6+49"
-          },
+          "place_id": "ChIJF02gTvdQqEcRtPd1r5K5Ukk",
           "types": [
-            "street_address"
+            "premise"
           ]
         }
       ],

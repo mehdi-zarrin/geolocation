@@ -1,0 +1,9 @@
+{
+  "request": {
+    "urlPath": "/v1/geocode",
+    "method": "GET"
+  },
+  "response": {
+    "status": 500
+  }
+}

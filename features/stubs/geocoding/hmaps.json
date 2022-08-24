@@ -8,45 +8,95 @@
     "jsonBody": {
       "items": [
         {
-          "title": "J. Jasinskio gatvė 16, LT-03163 Vilnius, Lietuva",
-          "id": "here:af:streetsection:-6G5iAj9lL2ZmcLi1xpC2A:CggIBCDehaq-AhABGgIxNg",
+          "title": "Pariser Stra\u00dfe 11, 10719 Berlin, Deutschland",
+          "id": "here:af:streetsection:Q2hINv6M87ck6YT9k9jv-C:CgcIBCCEt_lQEAEaAjEx",
           "resultType": "houseNumber",
           "houseNumberType": "PA",
           "address": {
-            "label": "J. Jasinskio gatvė 16, LT-03163 Vilnius, Lietuva",
-            "countryCode": "LTU",
-            "countryName": "Lietuva",
-            "state": "Vilniaus Apskritis",
-            "county": "Vilniaus Miesto savivaldybė",
-            "city": "Vilnius",
-            "district": "Naujamiestis",
-            "street": "J. Jasinskio gatvė",
-            "postalCode": "03163",
-            "houseNumber": "16"
+            "label": "Pariser Stra\u00dfe 11, 10719 Berlin, Deutschland",
+            "countryCode": "DEU",
+            "countryName": "Deutschland",
+            "stateCode": "BE",
+            "state": "Berlin",
+            "countyCode": "B",
+            "county": "Berlin",
+            "city": "Berlin",
+            "district": "Wilmersdorf",
+            "street": "Pariser Stra\u00dfe",
+            "postalCode": "10719",
+            "houseNumber": "11"
           },
           "position": {
-            "lat": 54.68781,
-            "lng": 25.26095
+            "lat": 52.49684,
+            "lng": 13.32579
           },
           "access": [
             {
-              "lat": 54.68795,
-              "lng": 25.26097
+              "lat": 52.4967,
+              "lng": 13.32571
             }
           ],
           "mapView": {
-            "west": 25.25939,
-            "south": 54.68691,
-            "east": 25.26251,
-            "north": 54.68871
+            "west": 13.32431,
+            "south": 52.49594,
+            "east": 13.32727,
+            "north": 52.49774
           },
           "scoring": {
-            "queryScore": 0.84,
+            "queryScore": 0.79,
             "fieldScore": {
               "country": 1,
               "city": 1,
               "streets": [
-                0.8
+                0.9
+              ],
+              "houseNumber": 1,
+              "postalCode": 1
+            }
+          }
+        },
+        {
+          "title": "Pariser Stra\u00dfe 11, 12623 Berlin, Deutschland",
+          "id": "here:af:streetsection:iBrPVqOYpdgPIPKWi8wn4B:CgcIBCDyhvJQEAEaAjEx",
+          "resultType": "houseNumber",
+          "houseNumberType": "PA",
+          "address": {
+            "label": "Pariser Stra\u00dfe 11, 12623 Berlin, Deutschland",
+            "countryCode": "DEU",
+            "countryName": "Deutschland",
+            "stateCode": "BE",
+            "state": "Berlin",
+            "countyCode": "B",
+            "county": "Berlin",
+            "city": "Berlin",
+            "district": "Mahlsdorf",
+            "street": "Pariser Stra\u00dfe",
+            "postalCode": "12623",
+            "houseNumber": "11"
+          },
+          "position": {
+            "lat": 52.4858,
+            "lng": 13.59301
+          },
+          "access": [
+            {
+              "lat": 52.48564,
+              "lng": 13.59361
+            }
+          ],
+          "mapView": {
+            "west": 13.59153,
+            "south": 52.4849,
+            "east": 13.59449,
+            "north": 52.4867
+          },
+          "scoring": {
+            "queryScore": 0.61,
+            "fieldScore": {
+              "country": 1,
+              "city": 1,
+              "streets": [
+                0.9
               ],
               "houseNumber": 1
             }

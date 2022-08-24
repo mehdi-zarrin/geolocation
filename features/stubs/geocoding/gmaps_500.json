@@ -1,0 +1,11 @@
+{
+  "request": {
+    "urlPath": "/maps/api/geocode/json",
+    "method": "GET"
+  },
+  "response": {
+    "status": 500
+  }
+}
+
+
