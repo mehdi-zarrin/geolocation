@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 DOCKER_COMPOSE="${DOCKER_COMPOSE:-"docker-compose -p test-geo-location -f docker-compose-test.yml"}"
 DOCKER_COMPOSE_EXEC="$DOCKER_COMPOSE exec -T "
