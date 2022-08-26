@@ -6,3 +6,10 @@ before_install:
   - mv behat.yml.dist behat.yml
   - make build
   - make test-api
+
+script:
+  - make test-api
+  - make test-integration
+
+after_script:
+  - mv behat.yml behat.yml.dist
