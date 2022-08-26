@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOCKER_COMPOSE="${DOCKER_COMPOSE:-"docker-compose -p test-technical-task -f docker-compose-test.yml"}"
+DOCKER_COMPOSE="${DOCKER_COMPOSE:-"docker-compose -p test-geo-location -f docker-compose-test.yml"}"
 DOCKER_COMPOSE_EXEC="$DOCKER_COMPOSE exec -T "
 
 echo "Executing 'docker-compose down' just to be sure that nothing left from previous builds"
