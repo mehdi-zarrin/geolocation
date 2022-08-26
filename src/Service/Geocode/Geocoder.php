@@ -48,7 +48,7 @@ class Geocoder implements GeocoderInterface
 
             $response = $provider->process($serviceRequest);
 
-            if ($response) {
+            if ($response !== null) {
                 break;
             }
         }

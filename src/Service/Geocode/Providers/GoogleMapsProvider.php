@@ -94,12 +94,10 @@ class GoogleMapsProvider implements GeocodeProviderInterface
             ]
         ];
 
-        $result = $this->httpClient->request(
+        return $this->httpClient->request(
             'GET',
             $this->host . '/maps/api/geocode/json',
             $params
         )->toArray();
-
-        return $result;
     }
 }
