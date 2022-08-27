@@ -21,6 +21,8 @@ test-api:
 test-integration:
 	sh ./run-behat.sh integration
 
+test: test-api test-integration
+
 wait-for-db:
 	$(EXEC) php -r "set_time_limit(60);for(;;){if(@fsockopen('nt_coordinates_resolver_mysql',3306)){break;}echo \"Waiting for MySQL\n\";sleep(1);}"
 

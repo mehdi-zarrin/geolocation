@@ -18,8 +18,6 @@ $DOCKER_COMPOSE_EXEC php-test ./bin/console doctrine:schema:create -n
 echo "Validating schema"
 $DOCKER_COMPOSE_EXEC php-test ./bin/console doctrine:schema:validate -n
 
-
-
 if [[ $1 == "integration" ]]
 then
 echo "Running integration tests"
@@ -30,7 +28,7 @@ $DOCKER_COMPOSE_EXEC php-test bash -c "
   "
 else
   echo "Running api tests"
-  $DOCKER_COMPOSE_EXEC php-test bash -c "APP_ENV=test ./vendor/bin/behat --suite=api"
+  $DOCKER_COMPOSE_EXEC php-test bash -c "./vendor/bin/behat --suite=api"
 fi
 
 echo "All tests successfully passed!"
