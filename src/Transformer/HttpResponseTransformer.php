@@ -27,6 +27,7 @@ class HttpResponseTransformer
      */
     public function transform(ServiceResponseInterface $responseDto): Response
     {
+        // TODO: in PHP >= 8 use named arguments to bypass the second argument
         $normalizedData = $this->objectNormalizer->normalize(
             $responseDto,
             null,
