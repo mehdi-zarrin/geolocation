@@ -19,10 +19,13 @@ make
 
 As you can see there is a `build passing` badge which means the project is built and tested by travis ci, however, if you want to run the test in your local machine just run the following commands:
 ```
+make test
+```
+or to run them separately run:
+```
 make api-test
 make integration-test
 ```
-
 in the api test the GMaps and HMaps are mocked using wiremock.
 
 then go to `http://localhost/coordinates` and it should return
