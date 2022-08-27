@@ -12,7 +12,7 @@ $DOCKER_COMPOSE up -d
 echo "Warming up cache"
 $DOCKER_COMPOSE_EXEC php-test ./bin/console cache:warmup
 echo "Waiting for mysql"
-$DOCKER_COMPOSE_EXEC mysql-test bash -c "while ! mysql -h localhost -u root -proot -e \"show databases\"; do sleep 1 ;done"
+$DOCKER_COMPOSE_EXEC php-test php -r "set_time_limit(60);for(;;){if(@fsockopen('test_coordinates_resolver_mysql',3306)){break;}echo \"Waiting for MySQL\n\";sleep(1);}"
 echo "Executing migrations"
 $DOCKER_COMPOSE_EXEC php-test ./bin/console doctrine:schema:create -n
 echo "Validating schema"
