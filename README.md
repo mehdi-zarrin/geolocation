@@ -28,7 +28,7 @@ make integration-test
 ```
 in the api test the GMaps and HMaps are mocked using wiremock.
 
-then go to `http://localhost/coordinates` and it should return
+then go to `http://localhost/coordinates?countryCode=de&city=berlin&postcode=10719&street=pariser11` and it should return
 ```
 {"lat":52.4968646,"lng":13.3257589}
 ```
