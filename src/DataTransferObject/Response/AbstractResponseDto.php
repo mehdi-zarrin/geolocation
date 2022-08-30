@@ -14,5 +14,4 @@ class AbstractResponseDto implements ServiceResponseInterface
     {
         return Response::HTTP_OK;
     }
-
 }

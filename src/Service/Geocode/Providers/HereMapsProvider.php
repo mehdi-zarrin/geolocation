@@ -35,8 +35,7 @@ class HereMapsProvider implements GeocodeProviderInterface
         string $apiKey,
         string $host,
         HttpClientInterface $httpClient
-    )
-    {
+    ) {
         $this->apiKey = $apiKey;
         $this->host = $host;
         $this->httpClient = $httpClient;
@@ -48,11 +47,8 @@ class HereMapsProvider implements GeocodeProviderInterface
     public function process(ServiceRequestInterface $serviceRequest): ?ServiceResponseInterface
     {
         try {
-
             $data = $this->getData($serviceRequest);
-
         } catch (\Exception $e) {
-
             return null;
         }
 
@@ -97,7 +93,8 @@ class HereMapsProvider implements GeocodeProviderInterface
 
         return $this->httpClient->request(
             'GET',
-            $this->host . '/v1/geocode', $params
+            $this->host . '/v1/geocode',
+            $params
         )->toArray();
     }
 }

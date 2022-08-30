@@ -43,7 +43,6 @@ class Geocoder implements GeocoderInterface
         $currentProvider = null;
 
         foreach ($this->providers as $provider) {
-
             $currentProvider = $provider;
 
             $response = $provider->process($serviceRequest);

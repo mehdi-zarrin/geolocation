@@ -34,8 +34,7 @@ class GoogleMapsProvider implements GeocodeProviderInterface
         string $apiKey,
         string $host,
         HttpClientInterface $httpClient
-    )
-    {
+    ) {
         $this->apiKey = $apiKey;
         $this->host = $host;
         $this->httpClient = $httpClient;
@@ -47,11 +46,8 @@ class GoogleMapsProvider implements GeocodeProviderInterface
     public function process(ServiceRequestInterface $serviceRequest): ?ServiceResponseInterface
     {
         try {
-
             $data = $this->getData($serviceRequest);
-
         } catch (\Exception $e) {
-
             return null;
         }
 

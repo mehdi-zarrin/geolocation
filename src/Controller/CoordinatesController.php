@@ -30,8 +30,7 @@ class CoordinatesController extends AbstractController
         ValidatorInterface $validator,
         ValidationErrorTransformer $validationErrorTransformer,
         HttpResponseTransformer $httpResponseTransformer
-    )
-    {
+    ) {
         $this->geocoder = $geocoder;
         $this->httpRequestTransformer = $httpRequestTransformer;
         $this->validator = $validator;
@@ -46,7 +45,7 @@ class CoordinatesController extends AbstractController
      */
     public function geocodeAction(Request $request): Response
     {
-        $serviceRequest = $this->httpRequestTransformer->transform($request, new AddressRequestDto);
+        $serviceRequest = $this->httpRequestTransformer->transform($request, new AddressRequestDto());
         $validationErrors = $this->validator->validate($serviceRequest);
 
         if ($validationErrors->count() > 0) {
