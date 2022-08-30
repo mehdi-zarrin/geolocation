@@ -41,4 +41,4 @@ analyse-code:
 		'composer install --no-progress --prefer-dist --no-interaction \
 		&& vendor/bin/phpcs \
 		&& vendor/bin/phpstan analyse src \
-		&& composer validate --strict'
+		'
