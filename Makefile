@@ -33,5 +33,12 @@ db-migrate: wait-for-db
 	$(CONSOLE) doctrine:migration:migrate -n --no-debug
 
 analyse-code:
-	$(EXEC) vendor/bin/phpcs
-	$(EXEC) vendor/bin/phpstan analyse src
+	docker build --tag ${APP_IMAGE} .
+	docker run --tty --rm \
+		--volume "`pwd`:/app" \
+		${APP_IMAGE} \
+		bash -c \
+		'composer install --no-progress --prefer-dist --no-interaction \
+		&& vendor/bin/phpcs \
+		&& vendor/bin/phpstan analyse src \
+		&& composer validate --strict'
