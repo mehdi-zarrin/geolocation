@@ -13,10 +13,6 @@ docker
 /vendor/
 ###< symfony/framework-bundle ###
 
-###> friends-of-behat/symfony-extension ###
-/behat.yml
-###< friends-of-behat/symfony-extension ###
-
 ###> symfony/phpunit-bridge ###
 .phpunit.result.cache
 /phpunit.xml
@@ -26,3 +22,8 @@ docker
 /phpunit.xml
 .phpunit.result.cache
 ###< phpunit/phpunit ###
+
+###> squizlabs/php_codesniffer ###
+/.phpcs-cache
+/phpcs.xml
+###< squizlabs/php_codesniffer ###

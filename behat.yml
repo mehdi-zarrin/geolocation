@@ -1,0 +1,41 @@
+default:
+    suites:
+        api:
+            paths:
+                - '%paths.base%/features'
+            filters:
+                tags: "@api"
+            contexts:
+                - behatch:context:json
+                - behatch:context:table
+                - behatch:context:rest
+                - Behat\MinkExtension\Context\MinkContext
+                - MTZ\BehatContext\Wiremock\WiremockContext
+                - MTZ\BehatContext\Doctrine\DoctrineContext
+
+        integration:
+            paths:
+                - '%paths.base%/features'
+            filters:
+                tags: "@integration"
+            contexts:
+                - behatch:context:json
+                - behatch:context:table
+                - behatch:context:rest
+                - Behat\MinkExtension\Context\MinkContext
+                - MTZ\BehatContext\Wiremock\WiremockContext
+                - MTZ\BehatContext\Doctrine\DoctrineContext
+
+    extensions:
+        FriendsOfBehat\SymfonyExtension:
+            bootstrap: tests/bootstrap.php
+            kernel:
+                environment: test
+        DAMA\DoctrineTestBundle\Behat\ServiceContainer\DoctrineExtension: ~
+
+        Behat\MinkExtension:
+            base_url: 'http://127.0.0.1'
+            sessions:
+                default:
+                    symfony: ~
+        Behatch\Extension: ~
