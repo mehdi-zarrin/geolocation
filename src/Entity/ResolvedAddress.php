@@ -41,12 +41,12 @@ class ResolvedAddress
     private $postcode;
 
     /**
-     * @ORM\Column(type="string", length=32, nullable=true)
+     * @ORM\Column(type="decimal", precision=10, nullable=true)
      */
     private $lat;
 
     /**
-     * @ORM\Column(type="string", length=32, nullable=true)
+     * @ORM\Column(type="decimal", precision=10, nullable=true)
      */
     private $lng;
 

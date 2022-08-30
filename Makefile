@@ -1,7 +1,7 @@
 export APP_IMAGE=mehdizarrin/geolocation
 EXEC=docker exec nt_coordinates_resolver_php
 CONSOLE=$(EXEC) bin/console
-all: build up db-init
+all: build up db-init db-migrate
 
 build:
 	docker build --tag ${APP_IMAGE} .
@@ -28,7 +28,10 @@ wait-for-db:
 
 db-init: wait-for-db
 	$(CONSOLE) doctrine:database:create --if-not-exists --no-debug
-	$(CONSOLE) doctrine:schema:update --force
 
 db-migrate: wait-for-db
-	$(EXEC) bin/console doctrine:migration:migrate -n --no-debug
+	$(CONSOLE) doctrine:migration:migrate -n --no-debug
+
+analyse-code:
+	$(EXEC) vendor/bin/phpcs
+	$(EXEC) vendor/bin/phpstan analyse src

@@ -5,4 +5,5 @@ before_install:
   - make build
 
 script:
+  - make analyse-code
   - make test
